@@ -13,6 +13,8 @@ h1 {
   margin: 20px 0;
 }
 
+
+
 .note {
   font-size: 1rem;
   font-style: Papyrus;
@@ -37,10 +39,10 @@ h1 {
 /* Side text styling */
 .side-text {
   color: #2c3d63;
-  flex: 1; /* Allow text blocks to grow and shrink */
+  flex: 1; 
   text-align: center;
   font-size: 2rem;
-  max-width: 20%; /* Adjust as needed to fit within the layout */
+  max-width: auto; /* Adjust as needed to fit within the layout */
 }
 
 
@@ -204,4 +206,35 @@ a{
   margin: 3rem;
   align-items: center;
   justify-items: space-between;
+}
+
+@media (max-width: 768px) {
+  .horizontal-container {
+    flex-direction: column; /* Stack images and text vertically */
+    align-items: center;
+  }
+  .horizontal-container img {
+    max-width: 60%;
+    margin: 10px 0;
+  }
+
+  .about .bio h2 {
+    font-size: 60%;
+    flex-direction: row;
+  }
+  
+  .about-family .bio-family h2{
+    font-size: 80%;
+    flex-direction: column;
+  }
+
+  .more-about-sm h1{
+    font-size: 100%;
+  }
+
+  .cards{
+    flex-direction: row;
+    padding: 1rem;
+    margin: 1rem;
+  }
 }
