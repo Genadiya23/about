@@ -63,18 +63,18 @@ h1 {
 .bio{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 
 .bio h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   width: 50%; /* 50% of the viewport width */
 }
 
 .bio img{
-  width: 25%; /* 50% of the viewport width */
+  width: 20%; /* 50% of the viewport width */
   height: auto;
   object-fit: cover;
 }
@@ -208,19 +208,15 @@ a{
   justify-items: space-between;
 }
 
-@media (max-width: 768px) {
-  .horizontal-container {
-    flex-direction: column; /* Stack images and text vertically */
-    align-items: center;
-  }
-  .horizontal-container img {
-    max-width: 60%;
-    margin: 10px 0;
-  }
+@media (max-width: 1020px) {
 
   .about .bio h2 {
-    font-size: 60%;
+    font-size: 80%;
     flex-direction: row;
+  }
+
+  .bio img{
+    max-width: 60%;
   }
   
   .about-family .bio-family h2{
@@ -238,3 +234,39 @@ a{
     margin: 1rem;
   }
 }
+
+@media (max-width: 768px) {
+  .horizontal-container {
+    flex-direction: column; /* Stack images and text vertically */
+    align-items: center;
+  }
+  .horizontal-container img {
+    max-width: 60%;
+    margin: 10px 0;
+  }
+
+  .about .bio h2 {
+    font-size: 80%;
+    flex-direction: row;
+  }
+
+  .bio img{
+    max-width: 60%;
+  }
+  
+  .about-family .bio-family h2{
+    font-size: 80%;
+    flex-direction: column;
+  }
+
+  .more-about-sm h1{
+    font-size: 100%;
+  }
+
+  .cards{
+    flex-direction: row;
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
